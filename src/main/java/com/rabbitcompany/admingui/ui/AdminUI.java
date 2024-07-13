@@ -467,6 +467,7 @@ public class AdminUI {
 
 		Inventory inv_players = Bukkit.createInventory(null, 54, Message.getMessage(p.getUniqueId(), "inventory_players"));
 
+		Channel.send(sender.getName(), "send", "online_players");
 		int online = Settings.online_players.size();
 
 		pages.put(p.getUniqueId(), (int) Math.ceil((float) online / 45));
